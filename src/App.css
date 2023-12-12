@@ -1,0 +1,35 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.contact-app {
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0.75rem 6rem rgba(56, 65, 74, 0.03);
+}
+
+.contact-app .header {
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  margin-bottom: 2rem;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.contact-app .header h2 {
+  margin-top: 0;
+}
+
+.contact-app_form {
+  margin-bottom: 2rem;
+}
+
+.contact-app_form input {
+  border-radius: 0;
+}
+
+.contact-app_form button {
+  border-radius: 0;
+}

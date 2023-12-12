@@ -13,7 +13,6 @@
 .contact-app .header {
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
   background-color: #fff;
-  margin-bottom: 2rem;
   text-align: center;
   padding: 10px 0;
 }
@@ -31,5 +30,18 @@
 }
 
 .contact-app_form button {
+  border-radius: 0;
+}
+
+.add-contact {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.add-contact button {
+  border: none;
   border-radius: 0;
 }

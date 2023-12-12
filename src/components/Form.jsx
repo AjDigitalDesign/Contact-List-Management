@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
 function Form(props) {
@@ -32,6 +33,9 @@ function Form(props) {
     }
     props.addContactHander(contact);
     setContact({ name: "", email: "", position: "" });
+
+    console.log(useNavigate);
+    console.log(props);
   }
 
   return (
@@ -79,9 +83,11 @@ function Form(props) {
           </div>
 
           <div className="form-group">
-            <button type="submit" className="btn btn-primary">
-              Add
-            </button>
+            <Link to="/">
+              <button type="submit" className="btn btn-primary">
+                Add
+              </button>
+            </Link>
           </div>
         </div>
       </form>

@@ -3,12 +3,21 @@ import "./App.css";
 import Form from "./components/Form";
 import ContactList from "./components/ContactList";
 
+import { v4 as uuidv4 } from "uuid";
+
 function App() {
   const LOCAL_STORAGE_KEY = "contacts";
   const [contacts, setContacts] = useState([]);
 
   const addContactHander = (contact) => {
-    setContacts([...contacts, contact]);
+    setContacts([...contacts, { id: uuidv4(), ...contact }]);
+  };
+
+  const removeContactHandler = (id) => {
+    const newContactList = contacts.filter((contact) => {
+      return contact.id !== id;
+    });
+    setContacts(newContactList);
   };
 
   useEffect(() => {
@@ -32,7 +41,7 @@ function App() {
         </header>
         <Form addContactHander={addContactHander} />
 
-        <ContactList contacts={contacts} />
+        <ContactList contacts={contacts} getContactId={removeContactHandler} />
       </div>
     </div>
   );

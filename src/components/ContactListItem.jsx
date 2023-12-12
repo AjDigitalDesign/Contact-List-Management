@@ -3,6 +3,11 @@ import { TrashIcon, PencilIcon } from "@heroicons/react/24/solid";
 
 function ContactListItem(props) {
   const { name, email, id } = props.contact;
+
+  function handleDeleteClick() {
+    props.clickHandler(id);
+  }
+
   return (
     <>
       <tr key={id}>
@@ -13,7 +18,11 @@ function ContactListItem(props) {
             <PencilIcon width={20} className="text-primary" />
           </span>
           <span className="delete px-1">
-            <TrashIcon width={20} className="text-danger" />
+            <TrashIcon
+              width={20}
+              className="text-danger"
+              onClick={handleDeleteClick}
+            />
           </span>
         </td>
       </tr>
